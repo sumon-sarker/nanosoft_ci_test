@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agency - Start Bootstrap Theme</title>
+    <title><?php echo $page_title ?></title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>nanosoft/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->

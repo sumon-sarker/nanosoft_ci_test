@@ -53,9 +53,9 @@ class Employees extends CI_Controller {
 			}
 			$offset = $config['per_page'] * $pageNum;
 		}
-
+		$data['page_title'] = 'HomePage - NanoSoft CodeIgniter';
 		$data['employees'] = $this->Employee->GetAll($config['per_page'],$offset);
-		$this->load->view('common/header');
+		$this->load->view('common/header',$data);
 		$this->load->view('Employees/index',$data);
 		$this->load->view('common/footer');
 	}
@@ -70,7 +70,8 @@ class Employees extends CI_Controller {
 				$data['employee'] = $res[0];
 			}
 		}
-		$this->load->view('common/header');
+		$data['page_title'] = 'View - NanoSoft CodeIgniter';
+		$this->load->view('common/header',$data);
 		$this->load->view('Employees/view',$data);
 		$this->load->view('common/footer');
 	}
@@ -100,8 +101,8 @@ class Employees extends CI_Controller {
 				redirect('employees');
 			}
 		}
-
-		$this->load->view('common/header');
+		$data['page_title'] = 'Edit - NanoSoft CodeIgniter';
+		$this->load->view('common/header',$data);
 		$this->load->view('Employees/edit',$data);
 		$this->load->view('common/footer');
 	}
@@ -121,9 +122,9 @@ class Employees extends CI_Controller {
 				redirect('employees');
 			}
 		}
-
-		$this->load->view('common/header');
-		$this->load->view('Employees/add');
+		$data['page_title'] = 'Add - NanoSoft CodeIgniter';
+		$this->load->view('common/header',$data);
+		$this->load->view('Employees/add',$data);
 		$this->load->view('common/footer');
 	}
 
@@ -175,10 +176,10 @@ class Employees extends CI_Controller {
 			}
 			$offset = $config['per_page'] * $pageNum;
 		}
-
+		$data['page_title'] = 'Attendance - NanoSoft CodeIgniter';
 		$data['employees'] 	= $this->Employee->GetAll($config['per_page'],$offset);
 		$data['attendances']= $this->Employee->GetAllAttandances($config['per_page'],$offset);
-		$this->load->view('common/header');
+		$this->load->view('common/header',$data);
 		$this->load->view('Employees/set_attendances',$data);
 		$this->load->view('common/footer');
 	}
@@ -208,8 +209,8 @@ class Employees extends CI_Controller {
 		}
 
 		$graph['search_date'] = $set_date;
-
-		$this->load->view('common/header');
+		$graph['page_title'] = 'Attendance - NanoSoft CodeIgniter';
+		$this->load->view('common/header',$graph);
 		$this->load->view('Employees/view_attendances',$graph);
 		$this->load->view('common/footer');
 	}
