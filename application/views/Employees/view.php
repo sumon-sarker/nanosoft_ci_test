@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="text-center">
-          <img style="max-height:120px;margin:auto" class="img-responsive" src="http://demo.powowbox.com/powowbox/avatar_demo/Jane_0001.png" alt="<?php ?>">
+          <img style="max-height:120px;margin:auto" class="img-responsive" src="<?php echo base_url() ?>nanosoft/img/team/1.jpg" alt="<?php echo $employee->first_name . ' ' . $employee->last_name ?>">
         </div>
       </div>
       <div class="col-md-8">
