@@ -1,0 +1,24 @@
+#mainNav{
+  background-color: #222222;
+  position: relative;
+}
+header{
+  margin-top: -50px;
+}
+.thumbnail{
+  position: relative;
+}
+.absent_present span{
+  position: absolute;
+  top: 76%;
+  right: 3%;
+}
+.absent_present .btn{
+  font-size: 10px;
+}
+.absent_present span.glyphicon-remove-circle{
+  color: red;
+}
+.absent_present span.glyphicon-ok-circle{
+  color: green;
+}
