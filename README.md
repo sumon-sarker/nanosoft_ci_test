@@ -1,2 +1,2 @@
-# nanosoft_ci_test
-A CI test project
+# CI test project
+Codeigniter test project
